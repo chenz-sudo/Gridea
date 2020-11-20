@@ -2,57 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://chenz-sudo.github.io/Gridea</id>
     <title>Chenz&apos;s blog</title>
-    <updated>2020-11-20T13:30:32.154Z</updated>
+    <updated>2020-11-20T13:54:47.609Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://chenz-sudo.github.io/Gridea"/>
     <link rel="self" href="https://chenz-sudo.github.io/Gridea/atom.xml"/>
     <logo>https://chenz-sudo.github.io/Gridea/images/avatar.png</logo>
     <icon>https://chenz-sudo.github.io/Gridea/favicon.ico</icon>
     <rights>All rights reserved 2020, Chenz&apos;s blog</rights>
-    <entry>
-        <title type="html"><![CDATA[PyFVCOM的安装]]></title>
-        <id>https://chenz-sudo.github.io/Gridea/pyfvcom-install/</id>
-        <link href="https://chenz-sudo.github.io/Gridea/pyfvcom-install/">
-        </link>
-        <updated>2020-11-20T12:37:07.000Z</updated>
-        <content type="html"><![CDATA[<blockquote>
-<p>PyFVCOM is a collection of various tools and utilities which can be used to extract, analyse and plot input and output files from FVCOM as well as generate model inputs.</p>
-</blockquote>
-<pre><code>Github：https://github.com/pwcazenave/PyFVCOM
-</code></pre>
-<h1 id="step-1">Step 1</h1>
-<p>安装 hdf5<br>
-<a href="https://support.hdfgroup.org/ftp/HDF5/releases/hdf5-1.10/hdf5-1.10.5/src/hdf5-1.10.5.tar.gz">下载地址</a></p>
-<ol>
-<li>执行如下命令下载软件包</li>
-</ol>
-<pre><code>wget https://support.hdfgroup.org/ftp/HDF5/releases/hdf5-1.10/hdf5-1.10.5/src/hdf5-1.10.5.tar.gz
-</code></pre>
-<ol start="2">
-<li>解压</li>
-</ol>
-<pre><code>tar -xzvf hdf5-1.10.5.tar.gz
-cd hdf5-1.10.5
-</code></pre>
-<ol start="3">
-<li>安装</li>
-</ol>
-<pre><code>./configure --prefix=/path to hdf5/
-make
-make install
-</code></pre>
-<ol start="4">
-<li>设置环境</li>
-</ol>
-<pre><code>vi ~/.bashrc
-</code></pre>
-<p>    在文本末尾添加如下内容</p>
-<pre><code>export HDF5_DIR=/path to hdf5/
-export PATH=$HDF5_DIR/bin:$PATH
-export LD_LIBRARY_PATH=$HDF5_DIR/lib:$LD_LIBRARY_PATH
-export INCLUDE=$HDF5_DIR/include:$INCLUDE
-</code></pre>
-<p>保存后更新环境</p>
-]]></content>
-    </entry>
 </feed>
