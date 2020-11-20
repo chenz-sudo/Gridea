@@ -41,7 +41,6 @@
                     })();
                 </script>
                 
-        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script>
 </head>
 
 <body>
@@ -146,69 +145,174 @@
 </script>
             <div class="main">
                 <div class="container">
-                    <div class="intro">
-                        <div class="avatar">
-                            <a href="https://chenz-sudo.github.io/Gridea"><img src="https://chenz-sudo.github.io/Gridea/images/avatar.png?v=1605877353332"></a>
-                        </div>
-                        <div class="nickname">
-                            Chenz
-                        </div>
-                        <div class="description">
-                            <span id="subtitle">
-                                To be a great oceanographer.
+                    <article class="post-wrap">
+                        <header class="post-header">
+                            <h1 class="post-title">
+                                PyFVCOM的安装
+                            </h1>
+                            <!--en-->
+                            <div class="post-meta en">
+                                Author:
+                                <a itemprop="author" rel="author" href="/">
+                                    Chenz's blog
+                                </a>
+                                <span class="post-time">
+                                Date: <a href="#">2020-11-20</a>
                             </span>
-                        </div>
-                        <div class="links">
-                            
+                                <span class="post-readtime">Reading Time:<a href="#">0.8 mins</a></span>
+                                <span class="post-words">words:<a href="#">147</a></span>
                                 
-                                    <a class="link-item" href="https://space.bilibili.com/21250349" title="rss"><i class="fa fa-rss"></i></a>
+                                    <span class="post-category">
+                                Category:
+                                
+                                <a href="https://chenz-sudo.github.io/Gridea/tag/KRVazx20B/">pyfvcom</a>
+                                
+                                <a href="https://chenz-sudo.github.io/Gridea/tag/Uj-N6-luoJ/">fvcom</a>
+                                
+                            </span>
                                     
-                                        
+                            </div>
+                            <!--zh-->
+                            <div class="post-meta zh">
+                                &#x4F5C;&#x8005;:
+                                <a itemprop="author" rel="author" href="/">
+                                    Chenz's blog
+                                </a>
+                                <span class="post-time">&#x65E5;&#x671F;: <a href="#">2020-11-20</a></span>
+                                <span class="post-readtime">&#x9605;&#x8BFB;&#x65F6;&#x95F4;:<a href="#">0.8 &#x5206;&#x949F;</a></span>
+                                <span class="post-words">&#x5B57;&#x6570;:<a href="#">147</a></span>
                                 
-                                        
+                                    <span class="post-category">&#x5206;&#x7C7B;:
                                 
-                                        
+                                <a href="https://chenz-sudo.github.io/Gridea/tag/KRVazx20B/">pyfvcom</a>
                                 
-                                        
+                                <a href="https://chenz-sudo.github.io/Gridea/tag/Uj-N6-luoJ/">fvcom</a>
                                 
-                                        
-                                
-                                        
-                                
-                                        
-                                
-                                        
-                                
-                                        
-                                
-                                        
+                            </span>
+                                    
+                            </div>
+                        </header>
+                        <div class="post-content">
+                            <blockquote>
+<p>PyFVCOM is a collection of various tools and utilities which can be used to extract, analyse and plot input and output files from FVCOM as well as generate model inputs.</p>
+</blockquote>
+<pre><code>Github：https://github.com/pwcazenave/PyFVCOM
+</code></pre>
+<p><strong>Step 1</strong><br>
+安装 hdf5<br>
+<a href="https://support.hdfgroup.org/ftp/HDF5/releases/hdf5-1.10/hdf5-1.10.5/src/hdf5-1.10.5.tar.gz">下载地址</a></p>
+<ol>
+<li>执行如下命令下载软件包</li>
+</ol>
+<pre><code>wget https://support.hdfgroup.org/ftp/HDF5/releases/hdf5-1.10/hdf5-1.10.5/src/hdf5-1.10.5.tar.gz
+</code></pre>
+<ol start="2">
+<li>解压</li>
+</ol>
+<pre><code>tar -xzvf hdf5-1.10.5.tar.gz
+cd hdf5-1.10.5
+</code></pre>
+<ol start="3">
+<li>安装</li>
+</ol>
+<pre><code>./configure --prefix=/path to hdf5/
+make
+make install
+</code></pre>
+<ol start="4">
+<li>设置环境</li>
+</ol>
+<pre><code>vi ~/.bashrc
+</code></pre>
+<p>在文本末尾添加如下内容</p>
+<pre><code>export HDF5_DIR=/path to hdf5/
+export PATH=$HDF5_DIR/bin:$PATH
+export LD_LIBRARY_PATH=$HDF5_DIR/lib:$LD_LIBRARY_PATH
+export INCLUDE=$HDF5_DIR/include:$INCLUDE
+</code></pre>
+<p>保存后更新环境</p>
+
                         </div>
-                    </div>
+                        <div class="post-toc">
+                            
+                        </div>
+                        <section class="post-copyright en">
+                            <!--en-->
+                            <p class="copyright-item">
+                                <span>Author:</span>
+                                <span>Chenz's blog</span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>Permalink:</span>
+                                <span><a href="https://chenz-sudo.github.io/Gridea/post/pyfvcom-install/">https://chenz-sudo.github.io/Gridea/post/pyfvcom-install/</a></span>
+                            </p>
+                        </section>
+                        <section class="post-copyright zh">
+                            <!--zh-->
+                            <p class="copyright-item ">
+                                <span>&#x4F5C;&#x8005;:</span>
+                                <span>Chenz's blog</span>
+                            </p>
+
+                            <p class="copyright-item">
+                                <span>&#x6C38;&#x4E45;&#x94FE;&#x63A5;:</span>
+                                <span><a href="https://chenz-sudo.github.io/Gridea/post/pyfvcom-install/">https://chenz-sudo.github.io/Gridea/post/pyfvcom-install/</a></span>
+                            </p>
+                        </section>
+                        <!--en-->
+                        <section class="post-tags en">
+                            <div>
+                                <span>Tag(s):</span>
+                                <span class="tag">
+                                
+                                
+                                <a href="https://chenz-sudo.github.io/Gridea/tag/KRVazx20B/"># pyfvcom</a>
+                                
+                                <a href="https://chenz-sudo.github.io/Gridea/tag/Uj-N6-luoJ/"># fvcom</a>
+                                
+                                
+                            </span>
+                            </div>
+                            <div>
+                                <a href="javascript:window.history.back();">back</a>
+                                <span>&dot;</span>
+                                <a href="#">home</a>
+                            </div>
+                        </section>
+                        <!--zh-->
+                        <section class="post-tags zh">
+                            <div>
+                                <span>&#x6807;&#x7B7E;:</span>
+                                <span class="tag">
+                                
+                                
+                                <a href="https://chenz-sudo.github.io/Gridea/tag/KRVazx20B/"># pyfvcom</a>
+                                
+                                <a href="https://chenz-sudo.github.io/Gridea/tag/Uj-N6-luoJ/"># fvcom</a>
+                                
+                                
+                            </span>
+                            </div>
+                            <div>
+                                <a href="javascript:window.history.back();">
+                                &#x8FD4;&#x56DE;</a>
+                                <span>&dot;</span>
+                                <a href="#">&#x4E3B;&#x9875;</a>
+                            </div>
+                        </section>
+                        <section class="post-nav">
+                            
+                                    
+                        </section>
+                    </article>
                 </div>
+                
             </div>
     </div>
-
-</body>
-<script>
-    // type 
-    var typed = new Typed("#subtitle", {
-        strings: ['To be a great oceanographer.', '', ''],
-        startDelay: 10,
-        typeSpeed: 200,
-        loop: true,
-        backSpeed: 100,
-        showCursor: true
-    });
-    //head title
-    var titleTime;
-    document.addEventListener("visibilitychange", function() {
-        document.hidden ? (document.title = "\uD83D\uDE25" + OriginTitile, clearTimeout(titleTime)) : (document.title = "\uD83D\uDE1D" + OriginTitile, titleTime = setTimeout(function() {
-            document.title = OriginTitile
-        }, 2E3))
-    });
-    var OriginTitile = document.title;
-</script>
-
+    </div>
+    </div>
+    
         <footer id="footer" class="footer">
             <div class="copyright">
                 
@@ -254,5 +358,10 @@
                     console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
                 </script>
                 
+        </div>
+</body>
+<script>
+    scroll();
+</script>
 
 </html>
