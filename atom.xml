@@ -2,11 +2,29 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://chenz-sudo.github.io/Gridea</id>
     <title>Chenz&apos;s blog</title>
-    <updated>2020-11-19T09:32:28.242Z</updated>
+    <updated>2020-11-20T12:45:07.596Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://chenz-sudo.github.io/Gridea"/>
     <link rel="self" href="https://chenz-sudo.github.io/Gridea/atom.xml"/>
     <logo>https://chenz-sudo.github.io/Gridea/images/avatar.png</logo>
     <icon>https://chenz-sudo.github.io/Gridea/favicon.ico</icon>
     <rights>All rights reserved 2020, Chenz&apos;s blog</rights>
+    <entry>
+        <title type="html"><![CDATA[PyFVCOM的安装]]></title>
+        <id>https://chenz-sudo.github.io/Gridea/post/pyfvcom-de-an-zhuang/</id>
+        <link href="https://chenz-sudo.github.io/Gridea/post/pyfvcom-de-an-zhuang/">
+        </link>
+        <updated>2020-11-20T12:37:07.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p>PyFVCOM is a collection of various tools and utilities which can be used to extract, analyse and plot input and output files from FVCOM as well as generate model inputs.</p>
+</blockquote>
+<pre><code>Github：https://github.com/pwcazenave/PyFVCOM
+</code></pre>
+<h1 id="step-1">Step 1</h1>
+<p>安装 hdf5<br>
+<a href="https://support.hdfgroup.org/ftp/HDF5/releases/hdf5-1.10/hdf5-1.10.5/src/hdf5-1.10.5.tar.gz">下载地址</a></p>
+<p>在Linux下可以<br>
+weget https://support.hdfgroup.org/ftp/HDF5/releases/hdf5-1.10/hdf5-1.10.5/src/hdf5-1.10.5.tar.gz</p>
+]]></content>
+    </entry>
 </feed>
