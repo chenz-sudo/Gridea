@@ -16,7 +16,7 @@
 <script async src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/css/style.min.css" />
 <link rel="stylesheet" href="https://chenz-sudo.github.io/Gridea/styles/main.css" />
-<link rel="shortcut icon" href="https://chenz-sudo.github.io/Gridea/favicon.ico?v=1605885126144">
+<link rel="shortcut icon" href="https://chenz-sudo.github.io/Gridea/favicon.ico?v=1606889206689">
 <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <script type="text/javascript" src="https://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/itjoker233/Gridea-theme-Chic/assets/media/script/tocbot.min.js"></script>
@@ -71,7 +71,7 @@
                         <input id="switch_default" type="checkbox" class="switch_default">
                         <label for="switch_default" class="toggleBtn"></label>
             </div>
-            <form id="gridea-search-form" data-update="1605885126144" action="/search/index.html">
+            <form id="gridea-search-form" data-update="1606889206689" action="/search/index.html">
                 <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
             </form>
         </div>
@@ -90,7 +90,7 @@
                         <!--zh-->
                         <a id="mobile-toggle-theme-zh" class="a zh">&nbsp;&#x6697;&#x9ED1;</a>
                     </div>
-                    <form id="gridea-search-form" data-update="1605885126144" action="/search/index.html">
+                    <form id="gridea-search-form" data-update="1606889206689" action="/search/index.html">
                         <input class="search-input" autocomplete="off" spellcheck="false" name="q" autofocus="true" placeholder="Search...">
                     </form>
                     <!--en-->
@@ -148,7 +148,7 @@
                     <article class="post-wrap">
                         <header class="post-header">
                             <h1 class="post-title">
-                                PyFVCOM的安装
+                                NETCDF4&amp;PyFVCOM的安装
                             </h1>
                             <!--en-->
                             <div class="post-meta en">
@@ -159,11 +159,13 @@
                                 <span class="post-time">
                                 Date: <a href="#">2020-11-20</a>
                             </span>
-                                <span class="post-readtime">Reading Time:<a href="#">0.8 mins</a></span>
-                                <span class="post-words">words:<a href="#">147</a></span>
+                                <span class="post-readtime">Reading Time:<a href="#">2.6 mins</a></span>
+                                <span class="post-words">words:<a href="#">491</a></span>
                                 
                                     <span class="post-category">
                                 Category:
+                                
+                                <a href="https://chenz-sudo.github.io/Gridea/tag/haLPhgS2K/">netcdf</a>
                                 
                                 <a href="https://chenz-sudo.github.io/Gridea/tag/KRVazx20B/">pyfvcom</a>
                                 
@@ -179,10 +181,12 @@
                                     Chenz's blog
                                 </a>
                                 <span class="post-time">&#x65E5;&#x671F;: <a href="#">2020-11-20</a></span>
-                                <span class="post-readtime">&#x9605;&#x8BFB;&#x65F6;&#x95F4;:<a href="#">0.8 &#x5206;&#x949F;</a></span>
-                                <span class="post-words">&#x5B57;&#x6570;:<a href="#">147</a></span>
+                                <span class="post-readtime">&#x9605;&#x8BFB;&#x65F6;&#x95F4;:<a href="#">2.6 &#x5206;&#x949F;</a></span>
+                                <span class="post-words">&#x5B57;&#x6570;:<a href="#">491</a></span>
                                 
                                     <span class="post-category">&#x5206;&#x7C7B;:
+                                
+                                <a href="https://chenz-sudo.github.io/Gridea/tag/haLPhgS2K/">netcdf</a>
                                 
                                 <a href="https://chenz-sudo.github.io/Gridea/tag/KRVazx20B/">pyfvcom</a>
                                 
@@ -198,24 +202,57 @@
 </blockquote>
 <pre><code>Github：https://github.com/pwcazenave/PyFVCOM
 </code></pre>
-<h1 id="step-1">Step 1</h1>
-<p>安装 hdf5<br>
-<a href="https://support.hdfgroup.org/ftp/HDF5/releases/hdf5-1.10/hdf5-1.10.5/src/hdf5-1.10.5.tar.gz">下载地址</a></p>
+<h1 id="step1">Step1</h1>
+<p>安装openmpi</p>
 <ol>
-<li>执行如下命令下载软件包</li>
+<li>下载软件包</li>
 </ol>
-<pre><code>wget https://support.hdfgroup.org/ftp/HDF5/releases/hdf5-1.10/hdf5-1.10.5/src/hdf5-1.10.5.tar.gz
+<pre><code>https://download.open-mpi.org/release/open-mpi/v3.1/openmpi-3.1.4.tar.gz
+</code></pre>
+<ol start="2">
+<li>解压</li>
+</ol>
+<pre><code>tar -xzvf openmpi-3.1.4.tar.gz
+</code></pre>
+<ol start="3">
+<li>安装</li>
+</ol>
+<pre><code>cd openmpi-3.1.4
+./configure --prefix=/path to openmpi/
+make
+make install
+</code></pre>
+<ol start="4">
+<li>设置环境变量</li>
+</ol>
+<pre><code>vi ~/.bashrc
+</code></pre>
+<p>    在文本末尾添加如下内容</p>
+<pre><code>export OMP=/path to openmpi/
+export PATH=$OMP/bin:$PATH
+export LD_LIBRARY_PATH=$OMP/lib:$LD_LIBRARY_PATH
+export INCLUDE=$OMP/include:$INCLUDE
+</code></pre>
+<p>    保存后更新环境</p>
+<pre><code>source ~/.bashrc
+</code></pre>
+<h1 id="step-2">Step 2</h1>
+<p>安装 hdf5</p>
+<ol>
+<li>下载软件包</li>
+</ol>
+<pre><code>https://support.hdfgroup.org/ftp/HDF5/releases/hdf5-1.10/hdf5-1.10.5/src/hdf5-1.10.5.tar.gz
 </code></pre>
 <ol start="2">
 <li>解压</li>
 </ol>
 <pre><code>tar -xzvf hdf5-1.10.5.tar.gz
-cd hdf5-1.10.5
 </code></pre>
 <ol start="3">
 <li>安装</li>
 </ol>
-<pre><code>./configure --prefix=/path to hdf5/
+<pre><code>cd hdf5-1.10.5
+./configure --prefix=/path to hdf5/ --enable-fortran --enable-parallel CC=mpicc FC=mpif90 CXX=mpicxx
 make
 make install
 </code></pre>
@@ -225,12 +262,88 @@ make install
 <pre><code>vi ~/.bashrc
 </code></pre>
 <p>    在文本末尾添加如下内容</p>
-<pre><code>export HDF5_DIR=/path to hdf5/
-export PATH=$HDF5_DIR/bin:$PATH
-export LD_LIBRARY_PATH=$HDF5_DIR/lib:$LD_LIBRARY_PATH
-export INCLUDE=$HDF5_DIR/include:$INCLUDE
+<pre><code>export HDF5=/path to hdf5/
+export PATH=$HDF5/bin:$PATH
+export LD_LIBRARY_PATH=$HDF5/lib:$LD_LIBRARY_PATH
+export INCLUDE=$HDF5/include:$INCLUDE
 </code></pre>
 <p>    保存后更新环境</p>
+<pre><code>source ~/.bashrc
+</code></pre>
+<h1 id="step-3">Step 3</h1>
+<p>安装 NETCDF-C</p>
+<ol>
+<li>下载软件包</li>
+</ol>
+<pre><code>https://www.unidata.ucar.edu/software/netcdf/
+</code></pre>
+<ol start="2">
+<li>解压</li>
+</ol>
+<pre><code>tar -zxvf netcdf-c-4.7.0.tar.gz
+</code></pre>
+<ol start="3">
+<li>安装</li>
+</ol>
+<pre><code>cd netcdf-c-4.7.0
+./configure --prefix=/path to netcdf/ LDFLAGS=-L$HDF5/lib CPPFLAGS=-I$HDF5/include CC=mpicc
+make 
+make install
+</code></pre>
+<ol start="4">
+<li>设置环境</li>
+</ol>
+<pre><code>vi ~/.bashrc
+</code></pre>
+<p>    在文本末尾添加如下内容</p>
+<pre><code>export NETCDF=/path to netcdf/
+export PATH=$NETCDF/bin:$PATH
+export LD_LIBRARY_PATH=$NETCDF/lib:$LD_LIBRARY_PATH
+export INCLUDE=$NETCDF/include:$INCLUDE
+</code></pre>
+<p>    保存后更新环境</p>
+<pre><code>source ~/.bashrc
+</code></pre>
+<h1 id="step-4">Step 4</h1>
+<p>安装 NETCDF-Fortran</p>
+<ol>
+<li>下载软件包</li>
+</ol>
+<pre><code>https://www.unidata.ucar.edu/software/netcdf/
+</code></pre>
+<ol start="2">
+<li>解压</li>
+</ol>
+<pre><code>tar -zxvf netcdf-fortran-4.4.5.tar.gz
+</code></pre>
+<ol start="3">
+<li>安装</li>
+</ol>
+<pre><code>cd netcdf-fortran-4.4.5
+./configure --prefix=/path to netcdf/ LDFLAGS=&quot;-L$HDF5/lib -L$NETCDF/lib&quot; CPPFLAGS=&quot;-I$HDF5/include -I$NETCDF/include&quot;  CC=mpicc FC=mpif90 F77=mpif90
+make
+make install
+</code></pre>
+<ol start="4">
+<li>更新环境</li>
+</ol>
+<pre><code>source ~/.bashrc
+</code></pre>
+<ol start="5">
+<li>验证安装</li>
+</ol>
+<pre><code>nc-config --all
+</code></pre>
+<p>如果对编译NETCDF时的编译器特殊要求（如intel），在CC、FC等指定。</p>
+<h1 id="step-5">Step 5</h1>
+<p>安装PyFVCOM</p>
+<pre><code>pip install PyFVCOM
+</code></pre>
+<p>过程中提示缺少组件另行安装即可。<br>
+或下载安装包安装</p>
+<pre><code>python setup.py build
+python setup.py install
+</code></pre>
 
                         </div>                     
                         <section class="post-copyright en">
@@ -264,6 +377,8 @@ export INCLUDE=$HDF5_DIR/include:$INCLUDE
                                 <span class="tag">
                                 
                                 
+                                <a href="https://chenz-sudo.github.io/Gridea/tag/haLPhgS2K/"># netcdf</a>
+                                
                                 <a href="https://chenz-sudo.github.io/Gridea/tag/KRVazx20B/"># pyfvcom</a>
                                 
                                 <a href="https://chenz-sudo.github.io/Gridea/tag/Uj-N6-luoJ/"># fvcom</a>
@@ -283,6 +398,8 @@ export INCLUDE=$HDF5_DIR/include:$INCLUDE
                                 <span>&#x6807;&#x7B7E;:</span>
                                 <span class="tag">
                                 
+                                
+                                <a href="https://chenz-sudo.github.io/Gridea/tag/haLPhgS2K/"># netcdf</a>
                                 
                                 <a href="https://chenz-sudo.github.io/Gridea/tag/KRVazx20B/"># pyfvcom</a>
                                 
@@ -350,7 +467,7 @@ export INCLUDE=$HDF5_DIR/include:$INCLUDE
                     console.clear();
                     
                     var newDate = new Date();
-                    newDate.setTime(1605885126144);
+                    newDate.setTime(1606889206689);
                     console.log(" Blog Update Time: " + newDate.toLocaleDateString());
                     console.log("\n %c \u26a1Theme:Chic Author's Blog:https://blog.itjoker.cn  Write By ITJoker  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;");
                 </script>
